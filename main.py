@@ -17,7 +17,7 @@ try:
 
     # Execute a query to retrieve data
     cursor.execute("SELECT * FROM index_server_map")
-    rows = cursor.fetchall()
+    rows = cursor.fetchone()
 
     # Specify the CSV file name
     csv_file = 'output.csv'
