@@ -30,8 +30,9 @@ try:
         column_names = [desc[0] for desc in cursor.description]
         writer.writerow(column_names)
 
-        # Write the data
-        writer.writerows(rows)
+        if rows:
+            # Write the data
+            writer.writerows(rows)
 
     print(f"Data has been written to {csv_file}")
 
